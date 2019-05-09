@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="{CHARSET}">
+		<meta charset="utf-8">
+		<meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0 auto;
+				padding: 0;
+			}
+			
+			.nav {
+				width: 100%;
+				height: 43px;
+				background: white;
+				text-align: center;
+				padding-top: 10px;
+				position: relative;
+			}
+			
+			.ct {
+				width: 100%;
+			}
+			
+			.nav-style {
+				width: 1200px;
+				min-width: 900px;
+			}
+			
+			#tvblogo {
+				width: 144px;
+				height: 33px;
+				margin-top: 16px;
+				margin-left: 20px;
+				float: left;
+			}
+			
+			.nav-left {
+				width: 48%;
+				min-width: 400px;
+				height: 50px;
+				float: left;
+			}
+			
+			.nav-login {
+				margin-left: -30px;
+				float: left;
+			}
+			
+			.nav-login-style {
+				margin-top: 32px;
+			}
+			
+			.nav-login-style a {
+				color: black;
+				text-decoration: none;
+				font-size: 0.1rem;
+			}
+			
+			.nav-login-style a:hover {
+				text-decoration: underline;
+			}
+			
+			.nav-login-style span {
+				font-size: 0.1rem;
+			}
+			
+			.nav-right-top {
+				height: 30px;
+				font-size: 0.1rem;
+			}
+			
+			.nav-right-top a {
+				color: black;
+				text-decoration: none;
+				font-size: 0.1rem;
+			}
+			
+			.nav-right-top a:hover {
+				text-decoration: underline;
+			}
+			
+			.nav-right-buttom {
+				margin-top: -5px;
+				border: solid 1px #C1C1C1;
+				float: left;
+			}
+			
+			.nav-right-buttom-nav {
+				font-size: 0.1rem;
+				position: relative;
+			}
+			
+			#nav-right-buttom-xlcd {
+				position: absolute;
+			}
+			
+			.nav-right-buttom-nav-ul {
+				width: 68px;
+				top: 30px;
+				left: px;
+				position: absolute;
+			}
+			
+			.nav-right-buttom-nav-ul li {
+				border: solid 1px black;
+				text-align: center;
+				list-style-type: none;
+				display: none;
+			}
+			
+			#nav-right-buttom-nav-style {
+				left: 10px;
+				position: absolute;
+			}
+			
+			#nav-right-buttom-nav-style a {
+				text-decoration: none;
+				color: black;
+			}
+			
+			#nav-right-top-min {
+				width: 80%;
+				min-width: 810px;
+				margin-top: -10px;
+				margin-left: 10px;
+			}
+			
+			.pi {
+				color: black;
+			}
+			
+			#nav-input {
+				float: left;
+				margin-left: 81px;
+				margin-top: 3px;
+				padding-top: 2px;
+				border: 0 none;
+				height: 18px;
+				color: #CCC;
+			}
+			
+			#nav-search-logo {
+				background: url("http://img.tvb.com/homepage/yahoo_logo_header_box_w_v2.gif") no-repeat scroll 0px 3px transparent;
+				float: right;
+				height: 26px;
+				margin-left: 2px;
+				width: 55px;
+			}
+			
+			.big-body-bg {
+				background-color: #FFF;
+				background: url("http://img.tvb.com/homepage/tmp/white/sunny_white.jpg") no-repeat;
+				background-position: center top;
+				min-width: 955px;
+			}
+			
+			#top-blank {
+				width: 953px;
+				height: 30px;
+				overflow: hidden;
+			}
+			
+			.nav-menu-item-a5 {
+				float: left;
+				width: 136px;
+				height: 30px;
+				cursor: pointer;
+				display: block;
+			}
+			
+			#top-blank #nav-menu-item-mtvs {
+				background-position: 0px 0;
+				border: 0;
+			}
+			
+			#top-blank #nav-menu-item-mtvs:hover {
+				background-position: 0px -30px;
+			}
+			
+			#top-blank #nav-menu-item-big {
+				background-position: -136px 0;
+			}
+			
+			#top-blank #nav-menu-item-big:hover {
+				background-position: -136px -30px;
+			}
+			
+			#top-blank #nav-menu-item-new {
+				background-position: -272px 0;
+			}
+			
+			#top-blank #nav-menu-item-new:hover {
+				background-position: -272px -30px;
+			}
+			
+			#top-blank #nav-menu-item-event {
+				background-position: -408px 0;
+			}
+			
+			#top-blank #nav-menu-item-event:hover {
+				background-position: -408px -30px;
+			}
+			
+			#top-blank #nav-menu-item-art {
+				background-position: -544px 0;
+			}
+			
+			#top-blank #nav-menu-item-art:hover {
+				background-position: -544px -30px;
+			}
+			
+			#top-blank #nav-menu-item-sched {
+				background-position: -680px 0;
+			}
+			
+			#top-blank #nav-menu-item-sched:hover {
+				background-position: -680px -30px;
+			}
+			
+			#top-blank #nav-menu-item-corp {
+				background-position: -816px 0;
+			}
+			
+			#top-blank #nav-menu-item-corp:hover {
+				background-position: -816px -30px;
+			}
+			
+			#top-blank a {
+				background: url(http://img.tvb.com/homepage/menu/topmenu_2018.gif) no-repeat;
+			}
+			
+			#top-nav {
+				
+			}
+			
+			#card {
+				position: relative;
+				width: 953px;
+				height: 408px;
+			}
+			
+			#left-top-Shuffling {
+				width: 317px;
+				float: left;
+			}
+			.mpm-mask{
+				bottom:3px;
+				height:30px;
+				position:absolute;
+				width:158px;
+				left:317px;
+				background-color:#000;
+				opacity:.8;
+				filter:alpha(opacity=80);
+				
+				}
+			.mpm-desc{
+				width:158px;
+				bottom:0px;
+				font-size:13px;
+				height:30px;
+				line-height:30px;
+				left:317px;
+				position:absolute;
+				font-weight:bold;
+				text-decoration:none;
+				color:#fff;
+				opacity:1;
+				filter:alpha(opacity=100);
+				overflow:hidden;
+				
+				}
+				.mpm-maskk{
+				bottom:3px;
+				height:30px;
+				position:absolute;
+				width:100%;
+				background-color:#000;
+				opacity:.8;
+				filter:alpha(opacity=80);
+				
+				}
+				.mpm-descc{
+				width:100%;
+				bottom:0px;
+				font-size:13px;
+				height:30px;
+				line-height:30px;
+				position:absolute;
+				font-weight:bold;
+				text-decoration:none;
+				color:#fff;
+				opacity:1;
+				filter:alpha(opacity=100);
+				overflow:hidden;
+				
+				}
+				.mpm-desc:hover{
+					opacity:0.6;
+				}
+				#card img:hover{
+					opacity:0.6;
+				}
+				.mpm_gallery{
+					width: 475px;
+					margin-left:0;
+				}
+				#center-right{
+					width: 158px;
+					height: 30px;
+					left: 477px;
+					top: 1px;
+					position:absolute;
+				}
+				#center-right-gg{
+					left: 645px;
+					top: 17px;
+					position:absolute;
+				}
+				#center-bottom-left{
+					margin-left: 10px;
+					
+				}
+				#gallery-5{
+					top: 139px;
+					left: 317px;
+					position:absolute;
+				}
+				#gallery-6{
+					top: 139px;
+					left: 477px;
+					position:absolute;
+				}
+				#gallery-7{
+					top: 275px;
+					left: 317px;
+					position:absolute;
+				}
+				#gallery-8{
+					top: 275px;
+					left: 635px;
+					position:absolute;
+				}
+				#gallery-9{
+					top: 275px;
+					left: 794px;
+					position:absolute;
+				}
+				#main-left{
+					width:310px;
+					float:left;
+				}
+				#main-wrapper{
+					width:953px;
+					margin-top:10px;
+				}
+				#inews-module{
+					width:310px;
+					font-family:arial,helvetica,sans-serif;
+				}
+				#inews-module .module-container{
+					height:447px;
+				}
+				#inews-module .module-container a{
+					text-decoration:none;
+				}
+				.module-title{
+					font-size:18px;
+					line-height:22px;
+					font-weight:bold;
+					color:#000;padding:5px 0;height:20px;
+				}
+				.module-title:after{
+					content:".";display:block;height:0;clear:both;visibility:hidden;
+					}
+				.module-title div{
+					float:left;
+					font-size:18px;
+					font-weight:bold;
+					color:#000;
+					line-height:22px;
+				}
+				.module-title div a{
+					float:left;
+					font-size:18px;
+					font-weight:bold;
+					color:#000;
+					line-height:22px;
+					text-decoration:none;
+				}
+				.module-title div a:hover{
+					text-decoration:underline;
+				}
+				.module-link{
+					float:left;
+					height:9px;
+					margin-left:10px;
+					padding-top:6px;
+					text-decoration:none;
+				}
+				.module-link div{
+					background:url(http://img.tvb.com/homepage/theme/w.gif) no-repeat top left;
+					background-position:0 -819px;
+					height:9px;
+					width:20px;
+					cursor:pointer;
+					overflow:hidden;
+				}
+				.module-link div:hover{
+					background-position:0 -830px!important;
+				}
+				#inews-module .module-container{
+					height:447px;
+				}
+				#inews-module .inews-breaknews a{
+					margin:6px 0 0 8px;
+					color:#F02672;
+					font-size:13px;
+					display:block;
+				}
+				#inews-headline img{
+					width:122px;
+					float:left;
+					height:69px;
+					display:inline;
+					margin:5px 6px 5px 9px;
+					*padding-bottom:5px;
+					border:0px;
+				}
+				#inews-headline .smallPlayIcon {
+					position: absolute;
+					top: 18px;
+					left: 45px;
+					filter: alpha(opacity=50);
+					-moz-opacity: 0.5;
+					-khtml-opacity: 0.5;
+					opacity: 0.5;
+				}
+				
+				#inews-headline .smallPlayIcon img {
+					width: 34px;
+					height: 31px;
+				}
+				
+				#inews-headline .indexList:hover .smallPlayIcon {
+					filter: alpha(opacity=100);
+					-moz-opacity: 1;
+					-khtml-opacity: 1;
+					opacity: 1;
+				}
+				
+				#inews-headline .categoryTitle {
+					font-size: 14px;
+					font-weight: bold;
+					margin: 8px 8px 0;
+				}
+				
+				#inews-headline h5.latest {
+					border-top: 1px solid #ccc;
+					padding: 8px 0 3px 0;
+					margin-top: 0;
+				}
+				
+				#inews-headline .indexList {
+					display: block;
+					zoom: 1;
+					width: 306px;
+					position: relative;
+					border: 1px solid #fff;
+					cursor: pointer;
+				}
+				
+				#inews-headline .indexList:hover,
+				#inews-headline .indexList.hover {
+					background: #ececec;
+					border: 1px solid #e2e2e2;
+				}
+				
+				#inews-headline .indexList div {
+					line-height: 24px;
+					display: inline;
+				}
+				
+				#inews-headline .indexList .time {
+					color: #7a7a7a;
+					padding-left: 8px;
+					line-height: 19px;
+				}
+				#inews-headline .indexList.img .title{
+					width:160px;
+					padding: 0px;
+					display: inline-block;
+					margin-top: 4px;
+				}
+				#inews-headline .indexList.img .time {
+					padding:0;
+				}
+				#inews-headline .misc{
+					position:relative;
+					display:block;
+				}
+				#inews-headline .vdoIcon{
+					background:url('http://img.tvb.com/inews_web/web/cam_icon.gif') no-repeat top center;
+					width:16px;
+					height:10px;
+				 	position:absolute;
+					top:6px;
+					right:5px;
+				}
+				#inews-module .inews-breaknews a{
+					margin:6px 0 0 8px;
+					color:#F02672;
+					font-size:13px;
+					display:block;
+				}
+				.title{
+					font-size: 13px;
+					color: black;
+				}
+		</style>
+	</head>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#nav-right-buttom-xlcd").mouseover(function() {
+				$(".nav-right-buttom-nav-li").css("display", "block")
+			}).on("mouseout", function() {
+				$(".nav-right-buttom-nav-li").css("display", "none")
+			})
+
+		})
+	</script>
+
+	<body>
+		<div class="nav">
+			<div class="nav-style">
+				<div class="nav-left">
+					<a href="http://www.tvb.com">
+						<img src="tvb.com_files/tvb_logo_day_2017.gif" alt="tvb.com" border="0" id="tvblogo">
+					</a>
+				</div>
+				<div class="nav-login">
+					<div class="nav-login-style">
+						<a href="">新用户¿</a>
+						<span>|</span>
+						<a href="">登入</a>
+					</div>
+				</div>
+				<div id="nav-right-top-min">
+					<div class="nav-right-top">
+						<p class="pi">熱門:
+
+							<a href="" class="rm"></a>
+							<a href="" class="rm"></a>
+							<a href="" class="rm"></a>
+							<a href="" class="rm"></a>
+						</p>
+					</div>
+				</div>
+				<div class="nav-right-buttom">
+					<div class="nav-right-buttom-nav">
+						<div id="nav-right-buttom-nav-style">
+							<div id="nav-right-buttom-bpd">
+								<select name="" style="border: solid 0px;width: 70px;height: 20px;position: absolute;top: 3px;">
+									<option value="tvb.com">tvb.com</option>
+									<option value="藝人Blog">藝人Blog</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div id="hd-search-input">
+						<input id="nav-input" class="general-text" type="text" style="" value="輸入搜尋字" name="">
+						<input width="24px" type="image" height="24px" border="0" name="" id="nav-input-image" value="" title="搜尋" alt="搜尋" src="tvb.com_files/blank.png" />
+						<div id="nav-search-logo">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="big-body-bg">
+			<div id="top-nav">
+				<div id="top-blank">
+					<a href="https://www.mytvsuper.com" id="nav-menu-item-mtvs" class="nav-menu-item-a5" alt="myTV SUPER" title="myTV SUPER"></a>
+					<a href="https://www.bigbigchannel.com.hk" id="nav-menu-item-big" class="nav-menu-item-a5" alt="bigbigchannel" title="bigbigchannel"></a>
+					<a href="http://news.tvb.com" id="nav-menu-item-new" class="nav-menu-item-a5" alt="無線新聞" title="無線新聞"></a>
+					<a href="http://event.tvb.com" id="nav-menu-item-event" class="nav-menu-item-a5" alt="熱爆推介" title="熱爆推介"></a>
+					<a href="http://artiste.tvb.com" id="nav-menu-item-art" class="nav-menu-item-a5" alt="藝人 Artiste" title="藝人 Artiste"></a>
+					<a href="http://schedule.tvb.com" id="nav-menu-item-sched" class="nav-menu-item-a5" alt="節目表 EPG" title="節目表 EPG"></a>
+					<a href="http://corporate.tvb.com/?lang=tc" id="nav-menu-item-corp" class="nav-menu-item-a5" alt="TVB 概覽" title="TVB 概覽"></a>
+				</div>
+			</div>
+			<div id="card">
+				<div id="left-top-Shuffling">
+					<a href="http://www.mytvsuper.com">
+						<div class="mpm_contains" style="opacity: 1; display: block;">
+
+							<img title="政壇欺望" alt="政壇欺望" src="./tvb.com_files/1553855278_qov_tvb.com-banner">
+
+						</div>
+					</a>
+					<a href="http://www.mytvsuper.com/" target="_self">
+						<div class="mpm_contains" style="display: none; opacity: 0">
+
+							<img title="myTV-Gold_beIN-SPORTS" alt="myTV-Gold_beIN-SPORTS" src="./tvb.com_files/1555554324_myTVGold_beINSPORTS_tvb.com-banner">
+
+						</div>
+					</a>
+					<a href="http://www.mytvsuper.com/" target="_self">
+						<div class="mpm_contains" style="display: none; opacity: 0">
+
+							<img title="非常審查官3" alt="非常審查官3" src="./tvb.com_files/1555554227_examiner3_tvb.com-banner">
+
+						</div>
+					</a>
+				</div>
+				<div id="center-top" style="">
+					
+						<div class="mpm_gallery" style="opacity: 1; display: none;">
+							<a href="http://programme.tvb.com/foodandtravel/midnightbanquets" target="_self">
+							<img title="深夜美食團" alt="深夜美食團" src="./tvb.com_files/1518189046_minight.jpg">
+							<div id="" style="position:relative;">
+							<div class="mpm-mask">&nbsp;</div>
+							<div class="mpm-desc">消夜天堂&nbsp;</div>	
+							</div>
+						</div>
+						</a>
+						
+
+							<div class="mpm_gallery" style="display: none;">
+								<a href="http://programme.tvb.com/foodandtravel/goodcheapeatssr8" target="_self">
+								<img title="食好D 食平D" alt="食好D 食平D" src="./tvb.com_files/1554871060_goodcheapeat2019.jpg">
+
+							</div>
+
+						</a>
+						
+
+							<div class="mpm_gallery" style="display: none;">
+								<a href="http://programme.tvb.com/info/cantoxicatingsr4" target="_self">
+								<img title="粵講粵㜺鬼" alt="粵講粵㜺鬼" src="./tvb.com_files/1551153982_Cantoxicating_Sr4_158x135.jpg">
+
+							</div>
+
+						</a>
+						
+
+							<div class="mpm_gallery" style="display: block; opacity: 1;">
+								<a href="http://programme.tvb.com/foodandtravel/homegrownflavourssr3" target="_self">
+								<img title="香港原味道" alt="香港原味道" src="./tvb.com_files/1551424466_HomegrownFlavoursSr3_158x135.jpg">
+
+							</div>
+
+						</a>
+						
+
+							<div class="mpm_gallery" style="display: none;">
+								<a href="http://programme.tvb.com/lifestyle/bigbigbaysr2" target="_self">
+								<img title="大灣區活好D 2" alt="大灣區活好D 2" src="./tvb.com_files/1551424584_BigBigday2_158x135.jpg">
+
+							</div>
+
+						</a>
+						
+
+							<div class="mpm_gallery" style="display: none;">
+								<a href="http://programme.tvb.com/foodandtravel/funabroadsr3" target="_self">
+								<img title="3日2夜" alt="3日2夜" src="./tvb.com_files/1551154048_3D2N_158x135.jpg">
+
+							</div>
+
+						</a>
+					</div>
+					<div id="center-right" >
+							<a href="http://programme.tvb.com/drama/heavenlysworddragonslayingsaber0001/" target="_self">
+								<img title="倚天屠龍記" alt="倚天屠龍記" src="tvb.com_files/1555045440_Etin_back.jpg"/>
+							</a>
+					  </div>
+					  <div id="center-right-gg">
+					  <a href="http://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjst1uuqLZyAxtn0xKdcp_GpW0HwupSBmNXejgfJyIfyxYZ719IuWfwe288O3pVnyVIXp86F8y1p7WQqRoSBXu7RjsVEQ1jQUZiqUpLjCqWmPFQsdXQ83z0VuKolKBVqpkUw63mK3pEp_gC5_3ER6ivOLnx9z5INy_FT9s_cyu4xW9iZ--kBJWUwSUipOVgeOpJhR7m4Vz7gIEVr8WxSC8P6bjn1JbzPPiWamJTtFcuL0aHVm2y4VodIOjpCxjjfhtYo%2526sai%253DAMfl-YSH4AQBHJMahsSY3nPRsmOP_mHmUI5DpRILIHXyjFxM0ftW6pmHQERpoTYca2N-3fye61RSd0Pk4Skh6XL262ssiK1ZFrg-ZrGk055lSQ%2526sig%253DCg0ArKJSzPyCkLZTP75CEAE%2526urlfix%253D1%2526adurl%253Dhttp://news.tvb.com/programmes/adreamhomeplanningegofinancespecial" target="_blank">
+					  	<img src="//img.ads.tvb.com/img/ads/rect/image/ad_img_20181220161331/Home_300x2501_jpg.jpg" width="300" height="250" border="0">
+					  </a>
+					</div>
+					<div id="center-bottom-left">
+						<a href="http://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsucB4v4JQA5arZuSjzW7U49xD-XYFI9Ct9WSLXNaHlVExofVTe0Z1Lrv2NkRQG94YP6RFQAuPaHw-PJiMg2_KkVKacL4VGU3oysIY1xiSg_ExdI4lcLsw2OlVbZR8-_v2mLQaIurkDFQT4Xf2e0ntpZorYFxmm4eWgoS-_jBF4ye2a9wQpFM2Dx4JMAeIFzkTtxmklSdt_FQiqsREx4HcbacV3bi0p5oBbJllparH9tQDMTr_zkVO40sSz1KpFdHynD%2526sai%253DAMfl-YTYvnqz6gVeurUXPvchIFuH7yx9Mpu8vPCdELZBjqaFRj561BPfKyi04LFzJuHsRzUEeFnHj1TP2bUeu_suPdcFv6pBN4O0mXWpOB8l0g%2526sig%253DCg0ArKJSzOwTKVm7zdJlEAE%2526urlfix%253D1%2526adurl%253Dhttp://news.tvb.com/programmes/innovationgps" target="_blank">
+							<img src="//img.ads.tvb.com/img/ads/rect/image/ad_img_20181220162410/SF_300x250_jpg.jpg" width="300" height="250" border="0">
+						</a>
+					</div>
+					<div class="gallery" id="gallery-5">
+						<a href="http://programme.tvb.com/variety/bigboysclub" target="_self">
+							
+							<div class="mpm_contains-left" style="opacity: 1; display: block;">
+								<img title="兄弟幫" alt="兄弟幫" src="./tvb.com_files/1545969351_bbc_158x135.jpg">
+
+							</div>
+							
+						</a>
+						<a href="http://programme.tvb.com/variety/lizasonline" target="_self">
+							
+							<div class="mpm_contains-left" style="display: none;">
+								<img title="娛樂大家" alt="娛樂大家" src="./tvb.com_files/1552548792_Lizaonline_158x135.jpg">
+
+							</div>
+							
+						</a>
+						<a href="http://b.tvb.com/tvb2018/" target="_self">
+							
+							<div class="mpm_contains-left" style="display: none;">
+								<img title="TVB 50+1周年再出發" alt="TVB 50+1周年再出發" src="./tvb.com_files/1539599063_51ann.jpg">
+
+							</div>
+							
+						</a>
+					</div>
+					
+					<div class="gallery" id="gallery-6">
+						<a href="http://programme.tvb.com/lifestyle/ownsweethome/game/?id=171" target="_self">
+							
+							<div class="mpm_contains-right" style="opacity: 1; display: none;">
+								<img title="安樂蝸" alt="安樂蝸" src="./tvb.com_files/1504586077_ownsweethome_01_158x135.jpg">
+								<div class="mpm-maskk">&nbsp;</div>
+								<div class="mpm-descc">《安樂蝸》大召集&nbsp;</div>
+							</div>
+							
+						</a>
+						<a href="http://event.tvb.com/thinkbig/recruitment1.php" target="_self">
+							
+							<div class="mpm_contains-right" style="display: block;">
+								<img title="Think Big" alt="Think Big" src="./tvb.com_files/1544778924_thinkbig2018_158x135OK.jpg">
+
+							</div>
+							
+						</a>
+					</div>
+					<div class="gallery" id="gallery-7">
+						<a href="http://programme.tvb.com/drama/thedefectedhongkongversion0001" target="_self">
+							
+							<div class="mpm_contains-bottom" style="opacity: 1; display: none;">
+								<img title="鐵探" alt="鐵探" src="./tvb.com_files/1553163504_theDefectedmpm.jpg">
+
+							</div>
+							
+						</a>
+						<a href="http://programme.tvb.com/drama/thedefectedhongkongversion0001" target="_self">
+							
+							<div class="mpm_contains-bottom" style="display: block;">
+								<img title="鐵探" alt="鐵探" src="./tvb.com_files/1555576017_Defected_317_136.jpg">
+								<div class="mpm-maskk">&nbsp;</div>
+								<div class="mpm-descc">慧雅私下求助國曙&nbsp;</div>
+							</div>
+							
+						</a>
+					</div>
+					<div class="gallery" id="gallery-8">
+						<a href="http://programme.tvb.com/drama/loandbehold/" target="_self">
+							
+							<div class="mpm_contains-bottom-left" style="opacity: 1; display: none;">
+								<img title="愛．回家之開心速遞" alt="愛．回家之開心速遞" src="./tvb.com_files/1555573978_Home_0422_561.jpg">
+								<div class="mpm-maskk">&nbsp;</div>
+								<div class="mpm-descc">成功男人背後&nbsp;</div>
+							</div>
+							
+						</a>
+						<a href="http://programme.tvb.com/drama/loandbehold" target="_self">
+						
+							<div class="mpm_contains-bottom-left" style="display: block; opacity: 1;">
+								<img title="愛．回家之開心速遞" alt="愛．回家之開心速遞" src="./tvb.com_files/1538646813_loandbehold_158x135.jpg">
+
+							</div>
+							
+						</a>
+					</div>
+					<div class="gallery" id="gallery-9">
+						<a href="http://programme.tvb.com/drama/legendofduguthe0001" target="_self">
+							
+							<div class="mpm_contains" style="opacity: 1;">
+								<img title="獨孤天下" alt="獨孤天下" src="./tvb.com_files/1548409464_doku_mpm.jpg">
+
+							</div>
+							
+						</a>
+					</div>
+					  </div>
+					  <div id="main-wrapper">
+					<div id="main-left">
+
+						<div id="inews-module">
+
+							<div class="module-title">
+								<div>
+									<a href="http://news.tvb.com/" target="_blank">無綫新聞</a>
+								</div>
+								<a class="module-link" href="http://news.tvb.com/" target="_blank">
+									<div title="更多無綫新聞" alt="更多無綫新聞">&nbsp;</div>
+								</a>
+							</div>
+							<div class="module-container">
+								<div class="inews-breaknews"></div>
+								<div id="inews-headline">
+									<div class="indexSmallDiv ">
+										<h5 class="categoryTitle">新聞頭版</h5>
+										<div class="indexList clearfix img general-text" style="height: 74px;"><img id="jurl" src="./tvb.com_files/entries_5cbd5c77e60383786ccaf039_2962595327_small_1555914511.jpg">
+										<span class="smallPlayIcon">
+											<img src="./tvb.com_files/play_small.png">
+										</span>
+											<a href="http://news.tvb.com/local/5cbd5c77e60383786ccaf039" target="_blank" class="title"></a>
+											<span class="misc">
+												<span class="time" style="font-size: 13px;">14:17</span>
+											<div class="vdoIcon"></div>
+											</span>
+										</div>
+									</div>
+				</div>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.get("js/nav-right-top.json", function(data) {
+				$.each(data.a, function(i, v) {
+					$(".rm").eq(0).html(v + "&nbsp;").appendTo($(".pi"))
+				});
+			})
+			$.get("js/src.json", function(data) {
+				$.each(data.txt, function(i, v) {
+					$(".title").html(v)
+				});
+				
+			})
+			
+			$.ajax({
+				type:"get",
+				url:"js/src.json",
+				async:true,
+				
+				success:function(data){
+					$.each(data.txt, function(i, v) {
+					$("#jurl").append($("<img/>").attr("src",t))
+				});
+				}
+			});
+			
+			function test1() {
+				$(".mpm_contains").eq(0).css("opacity", "0");
+				$(".mpm_contains").eq(0).css("display", "none");
+				$(".mpm_contains").eq(1).css("display", "block");
+				$(".mpm_contains").eq(1).css("opacity", "1");
+				clearInterval(test3);
+				setTimeout(test2, 4000)
+			}
+			setTimeout(test1, 1000);
+
+			function test2() {
+				$(".mpm_contains").eq(1).css("opacity", "0");
+				$(".mpm_contains").eq(1).css("display", "none");
+				$(".mpm_contains").eq(2).css("display", "block");
+				$(".mpm_contains").eq(2).css("opacity", "1");
+				clearInterval(test1);
+				setTimeout(test3, 4000)
+			}
+
+			function test3() {
+				$(".mpm_contains").eq(2).css("opacity", "0");
+				$(".mpm_contains").eq(2).css("display", "none");
+				$(".mpm_contains").eq(0).css("display", "block");
+				$(".mpm_contains").eq(0).css("opacity", "1");
+				clearInterval(test2);
+				setTimeout(test1, 4000)
+			}
+			
+			
+			
+								//分割线//
+			
+			
+			
+			
+			function stet1() {
+				$(".mpm_gallery").eq(3).css("opacity", "0");
+				$(".mpm_gallery").eq(3).css("display", "none");
+				$(".mpm_gallery").eq(0).css("display", "block");
+				$(".mpm_gallery").eq(0).css("opacity", "1");
+				setTimeout(stet2, 4000)
+			}
+			setTimeout(stet1, 1000);
+
+			function stet2() {
+				$(".mpm_gallery").eq(0).css("opacity", "0");
+				$(".mpm_gallery").eq(0).css("display", "none");
+				$(".mpm_gallery").eq(1).css("display", "block");
+				$(".mpm_gallery").eq(1).css("opacity", "1");
+				setTimeout(stet3, 4000)
+			}
+
+			function stet3() {
+				$(".mpm_gallery").eq(1).css("opacity", "0");
+				$(".mpm_gallery").eq(1).css("display", "none");
+				$(".mpm_gallery").eq(2).css("display", "block");
+				$(".mpm_gallery").eq(2).css("opacity", "1");
+				setTimeout(stet4, 4000)
+			}	
+			function stet4() {
+				$(".mpm_gallery").eq(2).css("opacity", "0");
+				$(".mpm_gallery").eq(2).css("display", "none");
+				$(".mpm_gallery").eq(3).css("display", "block");
+				$(".mpm_gallery").eq(3).css("opacity", "1");
+				setTimeout(stet5, 4000)
+			}
+
+			function stet5() {
+				$(".mpm_gallery").eq(3).css("opacity", "0");
+				$(".mpm_gallery").eq(3).css("display", "none");
+				$(".mpm_gallery").eq(4).css("display", "block");
+				$(".mpm_gallery").eq(4).css("opacity", "1");
+				setTimeout(stet6, 4000)
+			}
+			function stet6() {
+				$(".mpm_gallery").eq(4).css("opacity", "0");
+				$(".mpm_gallery").eq(4).css("display", "none");
+				$(".mpm_gallery").eq(5).css("display", "block");
+				$(".mpm_gallery").eq(5).css("opacity", "1");
+				setTimeout(stet7, 4000)
+			}
+			function stet7() {
+				$(".mpm_gallery").eq(5).css("opacity", "0");
+				$(".mpm_gallery").eq(5).css("display", "none");
+				$(".mpm_gallery").eq(3).css("display", "block");
+				$(".mpm_gallery").eq(3).css("opacity", "1");
+				setTimeout(stet1, 4000)
+			}
+			
+			
+			
+			
+			
+			
+							//分割线//
+							
+							
+							
+							
+			function zesz1() {
+				$(".mpm_contains-left").eq(0).css("opacity", "0");
+				$(".mpm_contains-left").eq(0).css("display", "none");
+				$(".mpm_contains-left").eq(1).css("display", "block");
+				$(".mpm_contains-left").eq(1).css("opacity", "1");
+				clearInterval(zesz3);
+				setTimeout(zesz2, 4000)
+			}
+			setTimeout(zesz1, 1000);
+
+			function zesz2() {
+				$(".mpm_contains-left").eq(1).css("opacity", "0");
+				$(".mpm_contains-left").eq(1).css("display", "none");
+				$(".mpm_contains-left").eq(2).css("display", "block");
+				$(".mpm_contains-left").eq(2).css("opacity", "1");
+				clearInterval(zesz1);
+				setTimeout(zesz3, 4000)
+			}
+
+			function zesz3() {
+				$(".mpm_contains-left").eq(2).css("opacity", "0");
+				$(".mpm_contains-left").eq(2).css("display", "none");
+				$(".mpm_contains-left").eq(0).css("display", "block");
+				$(".mpm_contains-left").eq(0).css("opacity", "1");
+				clearInterval(zesz2);
+				setTimeout(zesz1, 4000)
+			}
+			
+			
+			
+			
+			
+							//分割线//
+							
+							
+							
+			function xesx1() {
+				$(".mpm_contains-right").eq(0).css("opacity", "0");
+				$(".mpm_contains-right").eq(0).css("display", "none");
+				$(".mpm_contains-right").eq(1).css("display", "block");
+				$(".mpm_contains-right").eq(1).css("opacity", "1");
+				
+				setTimeout(xesx2, 4000)
+			}
+			setTimeout(xesx1, 1000);
+
+			function xesx2() {
+				$(".mpm_contains-right").eq(1).css("opacity", "0");
+				$(".mpm_contains-right").eq(1).css("display", "none");
+				$(".mpm_contains-right").eq(0).css("display", "block");
+				$(".mpm_contains-right").eq(0).css("opacity", "1");
+				
+				setTimeout(xesx1, 4000)
+			}setTimeout(xesx2, 1000);
+
+			
+			
+			
+			
+			
+							//分割线//
+							
+							
+											
+			function qesq1() {
+				$(".mpm_contains-bottom").eq(0).css("opacity", "0");
+				$(".mpm_contains-bottom").eq(0).css("display", "none");
+				$(".mpm_contains-bottom").eq(1).css("display", "block");
+				$(".mpm_contains-bottom").eq(1).css("opacity", "1");
+				
+				setTimeout(qesq2, 4000)
+			}
+			setTimeout(qesq1, 1000);
+
+			function qesq2() {
+				$(".mpm_contains-bottom").eq(1).css("opacity", "0");
+				$(".mpm_contains-bottom").eq(1).css("display", "none");
+				$(".mpm_contains-bottom").eq(0).css("display", "block");
+				$(".mpm_contains-bottom").eq(0).css("opacity", "1");
+				
+				setTimeout(qesq1, 4000)
+			}setTimeout(qesq2, 1000);
+
+			
+			
+			
+			
+			
+							//分割线//
+							
+							
+											
+			function aesa1() {
+				$(".mpm_contains-bottom-left").eq(0).css("opacity", "0");
+				$(".mpm_contains-bottom-left").eq(0).css("display", "none");
+				$(".mpm_contains-bottom-left").eq(1).css("display", "block");
+				$(".mpm_contains-bottom-left").eq(1).css("opacity", "1");
+				
+				setTimeout(aesa2, 4000)
+			}
+			setTimeout(aesa1, 1000);
+
+			function aesa2() {
+				$(".mpm_contains-bottom-left").eq(1).css("opacity", "0");
+				$(".mpm_contains-bottom-left").eq(1).css("display", "none");
+				$(".mpm_contains-bottom-left").eq(0).css("display", "block");
+				$(".mpm_contains-bottom-left").eq(0).css("opacity", "1");
+				
+				setTimeout(aesa1, 4000)
+			}setTimeout(aesa2, 1000);
+		</script>
+	</body>
+
+</html>
