@@ -1,0 +1,245 @@
+<style>
+
+#artiste_calendar_week_container .calendar {
+	width: 980px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin-left:0px;
+	border-left:1px solid #f0f0f0;
+	border-top:1px solid #f0f0f0;
+
+
+}
+#artiste_calendar_week_container *{
+	font-family:Arial;
+}
+#artiste_calendar_week_container {
+        z-index:9999;
+	height: 165px;
+    	/*overflow: hidden;*/
+    	width: 677px;
+}
+
+#artiste_calendar_week_container .prompt_wrapper{
+        height: 575px;
+    	left: 53px;
+    	overflow: hidden;
+    	position: absolute;
+    	top: 0;
+    	width: 678px;
+	display: none;
+}
+
+
+#artiste_calendar_week_container .calendar th {
+	height:30px; 
+	text-align:center; 
+	background:url('http://img.tvb.com/artiste/images/calendar/1/cal_bg_date.png'); 
+	color:#666; 
+	font-size:15px;
+	font-weight:bold;
+	/*border-right:1px solid #eaeaea;
+	border-bottom:1px solid #eaeaea;*/
+}
+#artiste_calendar_week_container .calendar td {
+	width: 88px;
+	height: 114px;
+	padding-top: 50px;
+	position: relative;
+	border-right: 1px #ccc solid;
+	border-left: 1px #ccc solid;
+	padding-bottom: 1px;
+	font-size:13px;
+}
+.artiste_calendar_ft{
+	background-color: #000;
+	width: 975px;
+	height: 30px;
+	margin-bottom:60px;
+}
+
+.grid_date_element {
+z-index: 10; position: absolute; text-align:right;left: 56px; top: -44px; width: 25px; height: 25px; color: rgb(255, 255, 255); font-size: 26px; font-weight: bold;
+line-height:25px;}
+.grid_date_element a{ position:relative; top:0px; font-size:26px; font-weight:bold;text-decoration:none;}
+
+#artiste_calendar_week_container .calendar .current_month .curent_month_date_container, #artiste_calendar_week_container .current_month .curent_month_date_container_clickable,#artiste_calendar_week_container .calendar .today .curent_month_date_container, #artiste_calendar_week_container .today .curent_month_date_container_clickable {
+	/*cursor:pointer;*/
+	background:#fff;
+
+}
+#artiste_calendar_week_container .calendar .current_month, #artiste_calendar_week_container .calendar .non_current_month, #artiste_calendar_week_container .calendar .today{
+	background:#ccc;
+
+}
+#artiste_calendar_week_container .calendar .current_month .grid_date_element{}
+#artiste_calendar_week_container .calendar .today {
+	
+}
+#artiste_calendar_week_container .calendar .today .grid_date_element{ color:#F02672;font-size: 26px; font-weight: bold;}
+#artiste_calendar_week_container .calendar .today .grid_date_element a{ color:#000!important;}
+#artiste_calendar_week_container .calendar .today .grid_date_element a:hover{ text-decoration:none;}
+
+#artiste_calendar_week_container .calendar .non_current_month .curent_month_date_container, #artiste_calendar_week_container .non_current_month .curent_month_date_container_clickable {
+	background:#f8f8f8;
+
+}
+#artiste_calendar_week_container .calendar .non_current_month .grid_date_element{ color:#fff;}
+#artiste_calendar_week_container .calendar .non_current_month .grid_date_element a{color:#fff!important;}
+/*hover*/
+#artiste_calendar_week_container .calendar .cellhover{cursor:pointer; background:#f9f9f9;}
+#artiste_calendar_week_container .calendar .cellhover .grid_date_element{background:#5a5a5a;}
+#artiste_calendar_week_container .calendar .cellhover .grid_date_element a{color:#fff;}
+
+#artiste_calendar_week_container .curent_month_date_container {
+	/*width: inherit;*/
+	height: 100%;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	display:block;
+}
+#artiste_calendar_week_container .curent_month_date_container_clickable {
+	/*width: inherit;*/
+	height: 100%;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	display:block;
+	cursor:pointer;
+	line-height: 15px;
+}
+#artiste_calendar_week_container .more_button{width:88px;height:164px;z-index:20;position:absolute;top:-50px;color:#FFF;opacity: 0;}
+#artiste_calendar_week_container .more_button img{position:absolute;top:0;left:0;z-index:22;}
+#artiste_calendar_week_container .more_button .more_bg{opacity: 0.8;background-color:#888;width:88px;height:164px;position:absolute;top:0;left:0;z-index:21;}
+/*.more_button:hover {opacity: 0.8;}*/
+#artiste_calendar_week_container .curent_month_date_container_clickable:hover {
+	/*background-color:#F9F9F9;*/
+	/*background: url("http://img.tvb.com/artiste/images/calendar/1/cal_icon_mouseover_more.png") no-repeat scroll center center transparent;*/
+	/*cursor:pointer;*/
+}
+#artiste_calendar_week_container .curent_month_date_table {
+	width: 35px;
+	height: 35px;
+}
+#artiste_calendar_week_container .curent_month_date_table td {
+	width: 35px;
+	height: 35px;
+}
+#artiste_calendar_week_container .current_month_date {
+	font-size: 16px;
+	font-weight: bold;
+}
+#artiste_calendar_week_container .caption_table {
+margin-left:10px;
+}
+#artiste_calendar_week_container .caption_table td {
+position: relative;
+color:#000;
+padding-right:10px;
+}
+#artiste_calendar_week_container .grid_date_content {
+z-index:9; position:absolute; left:0px; bottom:0px; width:82px; overflow:hidden; padding-left:5px; padding-bottom:3px; color:#000;
+}
+
+#artiste_calendar_week_container .calendar-caption{float:right;padding-bottom:6px;padding-left:80px;padding-top:35px;}
+#artiste_calendar_week_container .calendar-caption li{ list-style:none; display:inline; color:#666; font-size:12px;margin-right:10px;}
+#artiste_calendar_week_container .grid-view a{padding-left:20px;}
+#artiste_calendar_week_container .grid-view a.active{background:url(http://img.tvb.com/artiste/images/calendar/2/icon_module_grid.png) no-repeat 0px 50%; color:#000; text-decoration:none; cursor:default;}
+#artiste_calendar_week_container .list-view a{padding-left:20px;background:url(http://img.tvb.com/artiste/images/calendar/2/icon_module_list_pink.png) no-repeat 0px 50%;}
+#artiste_calendar_week_container a.btn-grid-more{background:url(http://img.tvb.com/artiste/images/calendar/2/icon_more_large_pink.png) no-repeat; width:20px;height:20px; display:inline-block;}
+
+#artiste_calendar_week_container .calendar_week_header{
+	width: 53px; 
+	height: 165px;
+	float: left;
+	background-color:#000;
+	position:relative;
+	float:left;
+}
+#artiste_calendar_week_container .calendar_week_header .selected-year{float:left; font-size:15px; color:#FFF;padding-top:3px;width:53px;font-weight:bold;text-align: center;}
+#artiste_calendar_week_container .calendar_week_header .selected-month{float:left; font-size:26px; color:#FFF;width:53px;font-weight:bold;text-align: center;line-height:90%}
+#artiste_calendar_week_container .calendar_week_header .month_more{background: url("http://img.tvb.com/artiste/images/calendar/1/m_cal_btn_more.png") no-repeat 0px 0px transparent;float:left;width:15px;height:15px;text-align: center;margin-top: 85px;margin-left: 19px;cursor:pointer;}
+#artiste_calendar_week_container .weekday_mainpage{font-size:15px;line-height: 18px;color:#fff;}
+#artiste_calendar_week_container .today .weekday_mainpage{color:#000;}
+#artiste_calendar_week_container .prompt{
+	background-color:#FFF;
+	position:absolute;
+	z-index:10000;
+	width: 622px; 
+	/*height: 575px;*/ 
+	top: 0px; 
+	left: 20px; 
+	border-bottom:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-top:1px solid #ccc;
+}
+#artiste_calendar_week_container .prompt #calendar_day_wapper{
+	position:relative;
+	width:594px;
+	/*height:540px;*/
+	top:35px;
+	left:10px;
+}
+#artiste_calendar_week_container .prompt .closeBtn{
+	background: url("http://img.tvb.com/artiste/images/calendar/1/cal_btn_close.png") no-repeat 0px 0px transparent;
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:15px;
+	height:15px;
+	cursor:pointer;
+}
+#artiste_calendar_week_container .prompt .closeBtn:hover{
+	background: url("http://img.tvb.com/artiste/images/calendar/1/cal_btn_close.png") no-repeat 0px -15px transparent;
+}
+
+#artiste_calendar_week_container .prompt #calendar_event_list_scroll_content{
+	/*position:absolute;
+	top:0px;
+	left:100px;*/
+	width:465px;
+}
+#artiste_calendar_week_container .prompt #calendar_event_list_scroll_content a{ font-size:13px; font-weight:normal;text-decoration:none;}
+#artiste_calendar_week_container .prompt #calendar_event_list_scroll_content a:hover{text-decoration:underline;}
+
+#artiste_calendar_week_container .prompt .event_header {
+	font-size: 15px;
+	font-weight: normal;
+	color: #000;
+	width: 430px !important;
+}
+#artiste_calendar_week_container .prompt .event_title {
+	font-size: 13px;
+	width:335px;
+	float:left;
+	clear: both;
+}
+#artiste_calendar_week_container .prompt .event_content {
+	font-size: 13px;
+	float:left;
+	width: 335px;
+}
+#artiste_calendar_week_container .prompt .event_content a{font-size:13px; font-weight:normal;color:#F02672;}
+
+#artiste_calendar_week_container .prompt .selected-year{position:absolute;top:-7px;left:0px;font-size:18px; font-weight:bold;}
+#artiste_calendar_week_container .prompt .selected-weekday{font-size:16px; font-weight:bold;vertical-align: top;}
+
+#artiste_calendar_week_container .prompt #scrollbar1 { width: 511px; clear: both; padding-left:87px;}
+#artiste_calendar_week_container .prompt #scrollbar1 .viewport { width: 493px; height: 500px; overflow: hidden; position: relative; }
+#artiste_calendar_week_container .prompt #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#artiste_calendar_week_container .prompt #scrollbar1 .thumb .end,
+#artiste_calendar_week_container .prompt #scrollbar1 .thumb { background-color: #f02672;}
+#artiste_calendar_week_container .prompt #scrollbar1 .scrollbar { position: relative; float: right; width: 15px; height: 465px!important; padding-top: 35px; /*overflow: hidden;*/}
+#artiste_calendar_week_container .prompt #scrollbar1 .track { background-color: #bcbcbc; height: 100%; width:5px; position: relative; padding: 0 1px; }
+#artiste_calendar_week_container .prompt #scrollbar1 .thumb { height: 20px; width: 5px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#artiste_calendar_week_container .prompt #scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 5px; }
+#artiste_calendar_week_container .prompt #scrollbar1 .disable{ display: none; }
+#artiste_calendar_week_container .prompt #scrollbar1 .separate{ background: url("http://img.tvb.com/artiste/images/calendar/1/cal_separate.gif") repeat-y 0px 0px transparent;
+								width:450px;
+								height:2px; 
+								margin-bottom:20px;
+								float:left;
+								}
+</style>
