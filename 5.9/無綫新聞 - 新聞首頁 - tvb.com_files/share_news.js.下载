@@ -1,0 +1,151 @@
+//TVB Share Library
+(function($) {
+	//TVBShare namespace $.fn.TVBShare {{{
+	$.fn.TVBShare = function( method ) {
+		var methods = $.fn.TVBShare.methods;
+		// Method calling logic
+		if ( methods[method] ) {
+			return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+		} else if ( typeof method === 'object' || ! method ) {
+			return methods.init.apply( this, arguments );
+		} else {
+			$.error( 'Method ' +  method + ' does not exist on jQuery.TVBShare' );
+		}
+	};
+	//}}}
+
+	$.fn.TVBShare.config = {
+		title: '',
+		description: '',
+		url: '',
+		picture: '',
+		from: '無綫新聞'
+	};
+
+	$.fn.TVBShare._windowOpen = function(url,name,options) {
+		var	left   = ($(window).width()  - options.width)  / 2,
+			top    = ($(window).height() - options.height) / 2,
+			opts   = 'status=1' +
+				 ',width='  + options.width  +
+				 ',height=' + options.height +
+				 ',top='    + top    +
+				 ',left='   + left;
+		
+		window.open(url, name, opts);
+	};
+
+	$.fn.TVBShare._createQueryString = function(param) {
+		var temp = [];
+		for( var p in param ){
+			temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+		}
+		return temp.join('&');
+	};
+
+	$.fn.TVBShare.methods = {
+		init: function(c) {
+
+			//Recursively merge the config
+			var c = $.extend(true, $.fn.TVBShare.config, c);
+
+			//Load JS SDKs
+			//$.getScript('http://connect.facebook.net/en_US/all.js');
+			//$.getScript('http://platform.twitter.com/anywhere.js?id=ArvsrSgN9oHQBRBQtx2ew');
+			//$.getScript('http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2236679056');
+			return $(this);
+		},
+		fb: function() {
+
+			$('html').attr('xmlns:fb','https://www.facebook.com/2008/fbml');
+			$('body').append('<div id="fb-root" />');
+			
+			//Initialize Facebook SDK
+			FB.init({
+				appId      : '314893845361998', // App ID
+				channelUrl : 'channel.php', // Channel File
+				status     : true, // check login status
+				cookie     : true, // enable cookies to allow the server to access the session
+				xfbml      : true  // parse XFBML
+			});
+
+			$(this).click(function(e) {
+				// calling the API ...
+				e.preventDefault();
+				var config = $.fn.TVBShare.config;
+				var obj = {
+					method: 'feed',
+					link: config.url,
+					picture: config.picture,
+					name: config.title,
+					caption: config.caption,
+					description: config.description
+				};
+
+				FB.ui(obj, function () {document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];});
+			});
+			return $(this);
+		},
+		tw: function(options) {
+			$(this).click(function(e) {
+				e.preventDefault();
+				var	config	= $.fn.TVBShare.config,
+					components = {
+						text: config.title,
+						hashtags: config.from,
+						url: config.url
+					},
+					url	= 'https://twitter.com/intent/tweet?'+$.fn.TVBShare._createQueryString(components);
+				$.fn.TVBShare._windowOpen(url, 'twitter', {width: 575, height: 400});
+			});
+			return $(this);
+		},
+		sn: function(options) {
+			$(this).click(function(e) {
+				e.preventDefault();
+				var	config	= $.fn.TVBShare.config,
+					components = {
+						appkey: 2236679056,
+						language: 'zh_tw',
+						url: config.url,
+						title: config.title,
+						pic: config.picture,
+						rnd: (new Date().valueOf())
+					},
+					url = 'http://service.weibo.com/share/share.php?'+$.fn.TVBShare._createQueryString(components);
+				$.fn.TVBShare._windowOpen(url,'sina',{width: 620, height: 500});
+			});
+			return $(this);
+		},
+		qq: function(options) {
+			$(this).click(function(e) {
+				e.preventDefault();
+				var	config	= $.fn.TVBShare.config,
+					components = {
+						c: 'share',
+						a: 'index',
+						f: 'q2',
+						appkey: 801131325,
+						url: config.url,
+						title: config.title,
+						pic: config.picture
+					},
+					url = 'http://share.v.t.qq.com/index.php?'+$.fn.TVBShare._createQueryString(components);
+				$.fn.TVBShare._windowOpen(url,'qq',{width: 620, height: 500});
+			});
+			return $(this);
+		},
+		gp: function(options) {
+			$(this).click(function(e) {
+				e.preventDefault();
+				var	config	= $.fn.TVBShare.config;
+				var	components = {
+						url: config.url
+					},
+					url = 'https://plus.google.com/share?'+$.fn.TVBShare._createQueryString(components);
+				$.fn.TVBShare._windowOpen(url,'qp',{width: 620, height: 500});
+			});
+			return $(this);
+		}
+	};
+
+})(jQuery);
